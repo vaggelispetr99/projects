@@ -1,0 +1,90 @@
+/*#1*/
+select airplanes.number
+from airplanes, airlines, airlines_has_airplanes
+where airplanes_id=airplanes.id and airlines_id=airlines.id and airlines.name="Lufthansa" and airplanes.manufacturer="Airbus";
+
+/*#2*/
+select Distinct airlines.name
+from airlines, routes, airports u1, airports u2
+where airlines.id=routes.airlines_id and routes.source_id=u1.id and routes.destination_id=u2.id and u1.city="Athens" and u2.city="Prague";
+
+/*#3*/
+select distinct count(flights_has_passengers.passengers_id) AS number
+from flights, flights_has_passengers, routes, airlines
+where airlines.name="Aegean Airlines" and flights.date= "2012-02-19" and flights.id=flights_has_passengers.flights_id and flights.routes_id= routes.id and airlines.id=routes.airlines_id; 
+
+/*#4*/
+select "yes" AS result
+from airlines
+where airlines.name="Olympic Airways" and exists (
+select *
+from routes, airports u1, airports u2, flights
+where routes.source_id=u1.id and routes.destination_id=u2.id and u1.name="Athens El. Venizelos" and u2.name="London Gatwick" and flights.date="2014-12-12" and routes.id=flights.routes_id and airlines.id=routes.airlines_id)
+union
+select "no" AS result
+from airlines
+where airlines.name="Olympic Airways" and not exists (
+select *
+from routes, airports u1, airports u2, flights
+where routes.source_id=u1.id and routes.destination_id=u2.id and u1.name="Athens El. Venizelos" and u2.name="London Gatwick" and flights.date="2014-12-12" and routes.id=flights.routes_id and airlines.id=routes.airlines_id);
+
+/*#5*/
+select (2022-avg( passengers.year_of_birth)) AS age
+from flights_has_passengers, flights, routes, airports, passengers
+where passengers.id=flights_has_passengers.passengers_id and flights.id=flights_has_passengers.flights_id and flights.routes_id= routes.id and routes.destination_id=airports.id and airports.city="Berlin";
+
+/*#6*/
+select p.name, p.surname
+from passengers p, airplanes air, flights_has_passengers fl, flights f
+where p.id=fl.passengers_id and fl.flights_id=f.id and f.airplanes_id=air.id
+group by p.id
+having count(distinct air.id)=1;
+
+/*#7*/
+select a1.city AS source,a2.city AS destination
+from flights,routes,airports a1,airports a2,flights_has_passengers fl
+where  flights.date >= "2010-03-01" and flights.date <= "2014-07-17" and flights.routes_id=routes.id and a2.id=routes.destination_id and a1.id=routes.source_id and flights.id=fl.flights_id
+group by flights.id
+having count(fl.passengers_id)>5;
+
+/*#8*/
+select airlines.name, airlines.code,count(routes.id) as num
+from airlines,  routes
+where routes.airlines_id=airlines.id and airlines.id in(
+select airlines.id
+from airlines_has_airplanes, airlines  
+where airlines.id=airlines_has_airplanes.airlines_id
+group by airlines_has_airplanes.airlines_id
+having count(airlines_has_airplanes.airplanes_id)=4)
+group by airlines.id;
+
+/*#9*/
+select p.name, p.surname
+from passengers p,flights_has_passengers fl1, flights f1, routes rt1, airlines airl1
+where p.id = fl1.passengers_id and fl1.flights_id = f1.id and f1.routes_id = rt1.id and rt1.airlines_id = airl1.id 
+group by p.id
+having count(distinct airl1.id)=(
+select count(airl.id)
+from airlines airl
+where airl.active="Y");
+
+/*#10*/
+select p.name, p.surname 
+from passengers p 
+where not exists (
+select *
+from flights_has_passengers fl , flights f, routes rt, airlines 
+where   p.id = fl.passengers_id and fl.flights_id = f.id and f.routes_id = rt.id and rt.airlines_id = airlines.id  and airlines.name <> "Aegean Airlines")and p.id in 
+(select distinct fl1.passengers_id
+from flights_has_passengers fl1)  -- filter out passengers without flights
+union
+select p.name, p.surname 
+from passengers p 
+Where exists(
+select *
+from flights_has_passengers fl , flights f, routes rt, airlines 
+where   p.id = fl.passengers_id and fl.flights_id = f.id and f.routes_id = rt.id and rt.airlines_id = airlines.id and f.date >= "2011-01-02"and f.date <= "2013-12-31" and p.id in 
+(select distinct fl1.passengers_id
+from flights_has_passengers fl1)  -- filter out passengers without flights
+group by p.id
+having count(f.id)>1);
