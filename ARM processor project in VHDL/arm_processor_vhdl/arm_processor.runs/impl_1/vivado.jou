@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Fri Apr  1 11:35:12 2022
+# Process ID: 3752
+# Current directory: C:/Users/User/arm_processor/arm_processor.runs/impl_1
+# Command line: vivado.exe -log arm.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source arm.tcl -notrace
+# Log file: C:/Users/User/arm_processor/arm_processor.runs/impl_1/arm.vdi
+# Journal file: C:/Users/User/arm_processor/arm_processor.runs/impl_1\vivado.jou
+# Running On: vaggospetr-pc, OS: Windows, CPU Frequency: 2904 MHz, CPU Physical cores: 8, Host memory: 16825 MB
+#-----------------------------------------------------------
+source arm.tcl -notrace

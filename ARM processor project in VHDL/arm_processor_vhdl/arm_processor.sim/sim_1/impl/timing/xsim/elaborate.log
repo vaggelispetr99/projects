@@ -1,0 +1,95 @@
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot arm_tb_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.arm_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+INFO: [XSIM 43-3451] SDF backannotation process started with SDF file "arm_tb_time_impl.sdf", for root module "arm_tb/uut".
+INFO: [XSIM 43-3452] SDF backannotation was successful for SDF file "arm_tb_time_impl.sdf", for root module "arm_tb/uut".
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package std.env
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module simprims_ver.OBUF
+Compiling module simprims_ver.BUFG
+Compiling module simprims_ver.IBUF
+Compiling module simprims_ver.LUT4
+Compiling module simprims_ver.LUT5
+Compiling module simprims_ver.FDCE_default
+Compiling module xil_defaultlib.flopenr
+Compiling module simprims_ver.LUT6
+Compiling module simprims_ver.x_lut3_mux8
+Compiling module simprims_ver.LUT3
+Compiling module xil_defaultlib.flopenr_0
+Compiling module xil_defaultlib.condlogic
+Compiling module xil_defaultlib.controller
+Compiling module simprims_ver.RAMS64E
+Compiling module xil_defaultlib.RAM64X1S_UNIQ_BASE_
+Compiling module xil_defaultlib.RAM64X1S_HD302
+Compiling module xil_defaultlib.RAM64X1S_HD303
+Compiling module xil_defaultlib.RAM64X1S_HD304
+Compiling module xil_defaultlib.RAM64X1S_HD305
+Compiling module xil_defaultlib.RAM64X1S_HD306
+Compiling module xil_defaultlib.RAM64X1S_HD307
+Compiling module xil_defaultlib.RAM64X1S_HD308
+Compiling module xil_defaultlib.RAM64X1S_HD309
+Compiling module xil_defaultlib.RAM64X1S_HD310
+Compiling module xil_defaultlib.RAM64X1S_HD311
+Compiling module xil_defaultlib.RAM64X1S_HD312
+Compiling module xil_defaultlib.RAM64X1S_HD313
+Compiling module xil_defaultlib.RAM64X1S_HD314
+Compiling module xil_defaultlib.RAM64X1S_HD315
+Compiling module xil_defaultlib.RAM64X1S_HD316
+Compiling module xil_defaultlib.RAM64X1S_HD317
+Compiling module xil_defaultlib.RAM64X1S_HD318
+Compiling module xil_defaultlib.RAM64X1S_HD319
+Compiling module xil_defaultlib.RAM64X1S_HD320
+Compiling module xil_defaultlib.RAM64X1S_HD321
+Compiling module xil_defaultlib.RAM64X1S_HD322
+Compiling module xil_defaultlib.RAM64X1S_HD323
+Compiling module xil_defaultlib.RAM64X1S_HD324
+Compiling module xil_defaultlib.RAM64X1S_HD325
+Compiling module xil_defaultlib.RAM64X1S_HD326
+Compiling module xil_defaultlib.RAM64X1S_HD327
+Compiling module xil_defaultlib.RAM64X1S_HD328
+Compiling module xil_defaultlib.RAM64X1S_HD329
+Compiling module xil_defaultlib.RAM64X1S_HD330
+Compiling module xil_defaultlib.RAM64X1S_HD331
+Compiling module xil_defaultlib.RAM64X1S_HD332
+Compiling module xil_defaultlib.dmem
+Compiling module simprims_ver.CARRY4
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.adder
+Compiling module simprims_ver.MUXF7
+Compiling module simprims_ver.x_lut2_mux4
+Compiling module simprims_ver.LUT2
+Compiling module simprims_ver.x_lut1_mux2
+Compiling module simprims_ver.LUT1
+Compiling module xil_defaultlib.flopr
+Compiling module simprims_ver.RAMD32
+Compiling module simprims_ver.RAMS32
+Compiling module xil_defaultlib.RAM32M_UNIQ_BASE_
+Compiling module xil_defaultlib.RAM32M_HD333
+Compiling module xil_defaultlib.RAM32M_HD334
+Compiling module xil_defaultlib.RAM32M_HD335
+Compiling module xil_defaultlib.RAM32X1D_UNIQ_BASE_
+Compiling module xil_defaultlib.RAM32X1D_HD336
+Compiling module xil_defaultlib.RAM32M_HD337
+Compiling module xil_defaultlib.RAM32M_HD338
+Compiling module xil_defaultlib.RAM32M_HD339
+Compiling module xil_defaultlib.RAM32M_HD340
+Compiling module xil_defaultlib.RAM32M_HD341
+Compiling module xil_defaultlib.RAM32X1D_HD342
+Compiling module xil_defaultlib.RAM32X1D_HD343
+Compiling module xil_defaultlib.RAM32M_HD344
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.datapath
+Compiling module xil_defaultlib.arm
+Compiling architecture behavioral of entity xil_defaultlib.arm_tb
+Built simulation snapshot arm_tb_time_impl

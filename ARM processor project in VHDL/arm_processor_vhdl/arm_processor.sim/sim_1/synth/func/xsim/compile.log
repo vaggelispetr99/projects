@@ -1,0 +1,12 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/User/arm_processor/arm_processor.sim/sim_1/synth/func/xsim/arm_tb_func_synth.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'adder'
+INFO: [VRFC 10-3107] analyzing entity 'alu'
+INFO: [VRFC 10-3107] analyzing entity 'dmem'
+INFO: [VRFC 10-3107] analyzing entity 'flopenr'
+INFO: [VRFC 10-3107] analyzing entity 'flopenr_0'
+INFO: [VRFC 10-3107] analyzing entity 'flopr'
+INFO: [VRFC 10-3107] analyzing entity 'regfile'
+INFO: [VRFC 10-3107] analyzing entity 'condlogic'
+INFO: [VRFC 10-3107] analyzing entity 'datapath'
+INFO: [VRFC 10-3107] analyzing entity 'controller'
+INFO: [VRFC 10-3107] analyzing entity 'arm'
