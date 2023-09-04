@@ -1,0 +1,3 @@
+In project_1_mysql_workbench folder you can find the implementation of an airport database in MySQL Workbench.
+In project_2_sql_querries folder you can find the implementation of a flights database and SQL querries on this database.
+In project_3_sql_querries_through_a_web_application folder you can find the implementation of a website through which SQL querries written in python are created for an airport database and the results are presented in the website's GUI.

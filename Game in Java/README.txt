@@ -1,0 +1,1 @@
+In gameJava file you can find an implementation in Java of a war game that is described in the gameJava_description pdf.
