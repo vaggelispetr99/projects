@@ -1,2 +1,2 @@
 # projects
-This is the repository of my coding projects.
+This is the repository of Evangelos Petropoulos coding projects.
