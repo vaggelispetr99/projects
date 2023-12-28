@@ -1,0 +1,4 @@
+Emily Kruglick      : 90.345 55.345 67.378
+Nancy Smith         : 54.632 87.755 45.276
+Ned Nickerson       : 76.345 89.988 88.231
+Richard Jones       : 33.865 53.275 22.885
