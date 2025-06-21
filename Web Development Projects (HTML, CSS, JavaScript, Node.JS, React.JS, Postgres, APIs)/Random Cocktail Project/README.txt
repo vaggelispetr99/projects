@@ -1,0 +1,2 @@
+This is a web app that I created using node.JS, HTML, CSS and a public API. The web app suggests you a cocktail recipe from the public API.
+Execute index.js in order to the see web app in "http://localhost:3000" url.

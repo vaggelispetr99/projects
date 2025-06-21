@@ -1,0 +1,33 @@
+<style>
+  .content_expand {
+      display: block;
+      overflow: hidden;
+      resize: none;
+  }
+</style>
+  <div class="container mb-3">
+    <form action="/deletepost" method="post" class="p-4 border border-2 border-light-subtle rounded" id="form_<%= i %>">
+        <div class="mb-3 d-flex flex-column">
+          <input type="text" class="form-control text-center fst-italic align-self-center" id="title_<%= i %>" name="title_<%= i %>" value="<%= title_1 %>" readonly style="font-size: 3rem;">
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control content_expand" id="content_<%= i %>" name="content_<%= i %>" readonly oninput="resizeTextarea()" style="font-size: 1.5rem;"><%= content_1 %></textarea>
+        </div>
+        <button type="button" class="btn btn-dark edit" id="button_<%= i %>">Edit</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
+        <button type="button" class="btn btn-dark update" id="update_<%= i %>" hidden>Update</button>
+        <button type="button" class="btn btn-outline-danger cancel" id="cancel_<%= i %>" hidden>Cancel</button>
+        
+      </form>
+  </div> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="../../public/editMore.js" charset="UTF-8"></script> 
+  <script type="text/javascript">
+    function resizeTextarea() {
+    var textarea = document.getElementById("content_<%= i %>");
+    textarea.style.height = "auto";
+    textarea.style.height = textarea.scrollHeight + "px";}
+
+    document.addEventListener("DOMContentLoaded", function() { resizeTextarea();}); // Call resizeTextarea() when the DOM is fully loaded
+
+</script>

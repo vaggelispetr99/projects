@@ -1,0 +1,2 @@
+This is a web app that I created using node.JS, EJS, CSS and Postgres. The web app that you keep notes about books you have read.
+Execute server.js in order to the see web app in "http://localhost:3000" url.

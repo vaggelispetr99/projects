@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Vaggospetr's Book Suggestions</h1>
+    <a id="newBookBtn" href="/new">Add Book</a>
+    <ul id="booksList">
+      <% books.forEach(book=> { %>
+        <li>
+          
+          <img src="https://covers.openlibrary.org/b/isbn/<%=book.isbn%>-M.jpg" />
+          <u><h2 style="color: black; font-size: xx-large;">
+            <%=book.title%>
+          </h2></u>
+          <small>
+            Date read: <%= formatDate(book.date) %>
+          </small>
+          <small>
+            ISBN: <%=book.isbn%>
+          </small>
+          <small>
+            How strongly I recommend it: <%=book.recommend%>/10
+          </small>
+          <u><h3 style="color: black; clear: left; text-align: left; font-size: x-large;">
+            Summary
+          </h3></u>
+          <p style="text-align: left;">
+            <%=book.preview%>
+          </p>
+          <u><h3 style="color: black; text-align: left; font-size: x-large;">
+            Notes
+          </h3></u>
+          <p style="text-align: left;">
+            <%=book.notes%>
+          </p>
+          <!-- <small>By: <%=book.author%> </small> -->
+          <a class="edit" href="/edit/<%= book.id %>">Edit</a>
+          <a class="delete" href="/delete/<%= book.id %>">Delete</a> 
+        </li>
+        <% }); %>
+    </ul>
+  </div>
+  <% function formatDate(dateString) {
+    const d = new Date(dateString);
+    const day = String(d.getDate()).padStart(2, '0');
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const year = d.getFullYear();
+    return `${day}-${month}-${year}`;
+  } %>
+</body>
+
+</html>

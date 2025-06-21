@@ -1,0 +1,2 @@
+This is a web app that I created using node.JS, EJS, CSS and Postgres. Through this web app you create, edit or delete a list. e.g. for supermarket.
+Execute index.js in order to the see web app in "http://localhost:3000" url.

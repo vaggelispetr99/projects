@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create/Edit Book</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>
+      <%= heading %>
+    </h1>
+
+    <% if (locals.book) { %>
+      <form id="editForm" method="post" action="/update/<%=book.id%>">
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" value="<%=book.title %>">
+        <label for="isbn">ISBN:</label>
+        <input type="text" id="isbn" name="isbn" pattern="[0-9]{10}|[0-9]{13}" title="Please enter exactly the 10 or 13 digit ISBN (numeric)" value="<%=book.isbn %>">
+        <label for="date">Read Date:</label>
+        <input type="date" id="date" name="date" value="<%=formatDate(book.date) %>">
+        <label for="recommend">How strongly I recommend it out of 10 (numeric):</label>
+        <input type="number" id="recommend" name="recommend" min="0" max="10" value="<%=book.recommend %>">
+        <label for="preview">Summary:</label>
+        <textarea name="preview" id="preview" rows="10"><%=book.preview %></textarea>
+        <label for="notes">Notes:</label>
+        <textarea name="notes" id="notes" rows="10"><%=book.notes %></textarea>
+        <button class="full-width" type="submit">
+          <%= submit %>
+        </button>
+      </form>
+      <% } else {%>
+        <form id="newBookForm" method="post" action="/create">
+          <input type="text" name="title" placeholder="Title" required>
+          <input type="text" name="isbn" pattern="[0-9]{10}|[0-9]{13}" placeholder="ISBN" title="Please enter exactly the 10 or 13 digit ISBN (numeric)" required>
+          <label for="datee">Read Date</label>
+          <input id="datee" type="date" name="date" placeholder="Date READ" required>
+          <input type="number" name="recommend" min="0" max="10" placeholder="How strongly I recommend it out of 10 (numeric)" required>
+          <textarea name="preview" placeholder="Summary" required rows="10"></textarea>
+          <textarea name="notes" placeholder="Notes" required rows="10"></textarea>
+          <button class="full-width" type="submit">
+            <%= submit %>
+          </button>
+        </form>
+        <% } %>
+
+  </div>
+  <% function formatDate(dateString) {
+    const d = new Date(dateString);
+    const day = String(d.getDate()).padStart(2, '0');
+    const month = String(d.getMonth() + 1).padStart(2, '0');
+    const year = d.getFullYear();
+    return `${year}-${month}-${day}`;
+  } %>
+</body>
+
+</html>

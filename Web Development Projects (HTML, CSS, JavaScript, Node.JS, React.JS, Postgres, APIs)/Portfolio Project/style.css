@@ -1,0 +1,212 @@
+.background-start {
+    background-image: url('./assets/images/dev-image.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+body {
+    font-family: 'Quantico';
+}
+
+.h1-start {
+    text-align: center;
+    margin-bottom: 35px;
+    font-family: 'Potra', sans-serif;
+    font-weight: bold;
+    font-size: 55px;
+}                                               
+
+.h2-start {
+    margin-top: 35px;
+    text-align: center;
+    font-family: 'Quantico';
+    font-weight: bold;
+}
+
+.h2-carousel {
+  position: relative;
+  top: 0rem;
+}
+
+
+.profile {
+    border-radius: 50%;
+}
+
+.h2-medium {
+    color: #007b57;
+    text-align: center;
+}
+
+.carousel-inner-2 {
+  background-color: white;
+}
+
+
+#myCarousel {
+    height: 100%;
+    padding-top: 10px;
+    background-color: #007b57;
+}
+
+
+#myCarousel-1 {
+  height: 100%;
+}
+
+.colored-buttons {
+  background-color: #007b57;
+}
+
+.h2-skills {
+  padding-top: 5.5rem;
+  color: white;
+  text-align: center;
+}
+
+.h2-skills-2 {
+  padding-top: 5.5rem;
+  color: #007b57;
+  text-align: center;
+}
+
+.h3-skills {
+  padding-top: 0rem;
+  color: #007b57;
+  text-align: center;
+}
+.lead {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  color: #007b57;
+}
+
+.btn-ctn {
+  border-width: 0px; 
+  font-size: 25px;
+  color: white;
+  background-color: #007b57;
+}
+
+.btn-prj {
+  color: white;
+  background-color: #007b57;
+}
+
+.feature-icon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+}
+
+.center-lang {
+  display: flex; 
+  flex-direction:column; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.album-ctr {
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+.skills-inside {
+  flex-wrap: wrap; 
+  font-size:x-large;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+    margin-bottom: 0rem;
+  }
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+  
+  .carousel-caption-new {
+    color: #007b57;
+  }
+  /* Declare heights because of positioning of img element */
+  .carousel-item {
+    height: 32rem;
+  }
+
+
+  .carousel-inner-1 {
+    background-color: #007b57;
+  }
+  
+  
+  /* MARKETING CONTENT
+  -------------------------------------------------- */
+  
+  /* Center align the text within the three columns below the carousel */
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  /* rtl:begin:ignore */
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+  /* rtl:end:ignore */
+  
+  
+  /* Featurettes
+  ------------------------- */
+  
+  .featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+  }
+  
+  /* Thin out the marketing headings */
+  /* rtl:begin:remove */
+  .featurette-heading {
+    letter-spacing: -.05rem;
+  }
+  
+  /* rtl:end:remove */
+  
+  /* RESPONSIVE CSS
+  -------------------------------------------------- */
+  
+  @media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
+  
+  @media (min-width: 62em) {
+    .featurette-heading {
+      margin-top: 7rem;
+    }
+  }
+
+  .carousel-control-next-icon-new {
+    background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='007b57'%3e%3cpath d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e") !important;
+  }
+
+  .carousel-control-prev-icon-new {
+    background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='007b57'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e") !important;
+  }
+ 

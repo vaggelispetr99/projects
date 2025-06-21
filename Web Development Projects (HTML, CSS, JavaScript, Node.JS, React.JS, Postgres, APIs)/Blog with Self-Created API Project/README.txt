@@ -1,0 +1,2 @@
+This is a web app that I created using node.JS, EJS and CSS. The web app simulates a blog with a server but without a database.
+Execute server.js and index.js in order to the see web app in "http://localhost:3000" url.
